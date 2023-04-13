@@ -1,0 +1,10 @@
+<p>Calcular divisas</p>
+<input type="number" [(ngModel)]="n1">
+<br>
+<select [(ngModel)]="div">
+  <option value="euro">Euro</option>
+  <option value="dolar">Dolar</option>
+  <option value="pesos">Pesos</option>
+</select>
+<button (click)="calcular()">Calcular</button>
+<p>El resultado es {{resultado}}</p>
