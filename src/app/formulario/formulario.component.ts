@@ -13,6 +13,7 @@ export class FormularioComponent {
   formaPago: string="efectivo"
   aceptar:boolean=false
   mensajeFinal: string=""
+  mensaje:string =""
   constructor(
 
   ){}
@@ -20,7 +21,16 @@ export class FormularioComponent {
 
   }
   enviar(){
-    this.mensajeFinal="Correo: "+this.email+" \n direccion: "+this.direccion+"  \ntelefono: "+this.telefono+" Comunidad: "+this.comunidad+" Forma de pago: "+this.formaPago
+   if(this.aceptar!= true)
+   {
+    this.mensaje="Ha aceptado recibir informacion"
+   }
+    else
+  {
+    this.mensaje="No ha aceptado recibir informacion"
+
+  }
+    this.mensajeFinal="Correo: "+this.email+"direccion: "+this.direccion+" \n telefono: "+this.telefono+" Comunidad: "+this.comunidad+" Forma de pago: "+this.formaPago+" "+this.mensaje
   }
 
 
